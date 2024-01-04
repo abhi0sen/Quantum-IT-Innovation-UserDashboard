@@ -1,0 +1,28 @@
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1D2C4F;
+    padding: 20px;
+  }
+
+.title{
+    background-color: #01F5E1;
+    color: grey;
+    padding: 20px 50px;
+    margin-top: -30px;
+}
+
+.inputStyle{
+    font-size: 14px;
+    background-color: #4D5974;
+    color: white;
+}
+
+.text-sm{
+    font-size: 12px;
+}
+.inputStyle::placeholder {
+  color: #999; 
+}

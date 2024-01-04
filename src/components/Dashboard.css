@@ -1,0 +1,14 @@
+.bodyStyle{
+    margin: 20px 100px;
+}
+.UserTable{
+    width: 100%;
+}
+.UserTable tr{
+    border-bottom: 1px solid black;
+    padding: 500px;
+}
+.UserTable td, .UserTable th{
+    padding-top:15px;
+    padding-bottom: 8px;
+}
