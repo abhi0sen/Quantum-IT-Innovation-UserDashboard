@@ -13,13 +13,13 @@ const Register = () => {
 
 
   const handleRegistraion = () => {
-    if (uName == "") {
+    if (uName === "") {
       setErrMsg("Please enter the username");
-    } else if (password == "") {
+    } else if (password === "") {
       setErrMsg("Please enter the Password");
     } else if (password.length < 6) {
       setErrMsg("Your password is too short");
-    }  else if(date == ""){
+    }  else if(date === ""){
       setErrMsg("Please Enter your Date of Birth")
     }
     else {
@@ -53,7 +53,7 @@ const Register = () => {
           <span>Register</span>
         </div>
         <div className="text-center RegisterImg my-4" alt="User Register">
-          <img src={user} />
+          <img src={user} alt = "User" />
         </div>
 
         <div>

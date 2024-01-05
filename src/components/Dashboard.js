@@ -1,22 +1,16 @@
 import React, {useState, useEffect} from 'react'
 import './Dashboard.css'
 import axios from "axios";
-import { getCookie, isLogin, setCookie } from "../utils/auth";
+import { isLogin, setCookie } from "../utils/auth";
 import Navbar from './Navbar';
-import { Link } from 'react-router-dom';
 
 
 const Dashboard = () => {
-  const [userid, setUserid] = useState(1);
   const [users, setUsers] = useState([]);
 
   const ListUsers = async()=> {axios
     .get("http://localhost:5000/user/")
     .then((response) => {
-      // setUserid(getCookie("userId"));
-      // const filteredUsers = response.data.filter(
-      //   (user) => user.userId == userid
-      // );
 
       setUsers(response.data);
       console.log(users)
@@ -24,9 +18,6 @@ const Dashboard = () => {
     .catch((error) => {
       console.error("Error fetching users:", error);
     });}
-
-    // console.log(getCookie("token"))
-    // console.log(isLogin())
     
     useEffect(() => {
       const authenticate = async() => {
@@ -36,7 +27,6 @@ const Dashboard = () => {
           } else{
         if(loggedIn.data.auth){
           setCookie("userId", loggedIn.data.data._id)
-          
         } 
         else{
           window.location.href = "/login";

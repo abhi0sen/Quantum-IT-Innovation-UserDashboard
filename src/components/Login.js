@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./style.css";
 import user from "./Images/user.png";
-import { setAuthentication, getCookie } from "../utils/auth";
+import { setAuthentication } from "../utils/auth";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -11,10 +11,10 @@ const Login = () => {
     const [ errMsg, setErrMsg] = useState("")
 
     const handleLogin = () => {
-        if(uName == ""){
+        if(uName === ""){
             setErrMsg("Please enter the username")
         }
-        else if (password == ""){
+        else if (password === ""){
             setErrMsg("Please enter the Password")
         }
         else{
@@ -48,7 +48,7 @@ const Login = () => {
           <span className="text-dark">SIGN IN</span>
         </div>
         <div className="text-center loginImg my-4" alt="User Login">
-          <img src={user} />
+          <img src={user} alt="User" />
         </div>
 
         <div>
@@ -71,6 +71,10 @@ const Login = () => {
                 placeholder="password"
                 onChange={(text) => {setPassword(text.target.value)}}
               />
+            </div>
+
+            <div className="text-danger my-1">
+              {errMsg}
             </div>
 
             <div className="resp-flex">
