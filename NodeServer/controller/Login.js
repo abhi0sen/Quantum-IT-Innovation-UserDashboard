@@ -4,7 +4,7 @@ const User = require("../models/User")
 
 module.exports = async (req, res) => {
     const { username, password } = req.body
-
+    
     const dbUser = await User.findOne({username}).exec()
 
     if (dbUser){
@@ -21,4 +21,4 @@ module.exports = async (req, res) => {
     } else{
         res.status(400).send("User doesn't exist")
     }
-}
+} 

@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
     date: {
         type:Date,
         required: [true, "Please Enter Date"],
-        unique: true,
     },
     email: {
         type:String,

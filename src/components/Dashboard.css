@@ -12,3 +12,13 @@
     padding-top:15px;
     padding-bottom: 8px;
 }
+
+@media only screen and (max-width: 500px){
+    .bodyStyle{
+        margin: 20px 10px;
+        overflow-x: scroll !important;
+    }
+    .UserTable tr td{
+        padding-right: 20px !important;
+    }
+}

@@ -26,3 +26,18 @@
 .inputStyle::placeholder {
   color: #999; 
 }
+.resp-flex{
+  display: flex;
+}
+.resp-text-end{
+  text-align: end;
+}
+
+@media only screen and (max-width:500px){
+  .resp-flex{
+    display: block !important;
+  }
+  .resp-text-end{
+    text-align: start;
+  }
+}
